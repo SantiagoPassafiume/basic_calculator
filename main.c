@@ -6,6 +6,7 @@ int main()
     double num1;
     double num2;
     char operator;
+    double result;
     printf("Enter first number: ");
     scanf("%lf", &num1);
     printf("Enter operator: ");
@@ -15,19 +16,19 @@ int main()
 
     if (operator== '+')
     {
-        printf("%f", num1 + num2);
+        result = num1 + num2;
     }
     else if (operator== '-')
     {
-        printf("%f", num1 - num2);
+        result = num1 - num2;
     }
     else if (operator== '*')
     {
-        printf("%f", num1 * num2);
+        result = num1 * num2;
     }
     else if (operator== '/')
     {
-        printf("%f", num1 / num2);
+        result = num1 / num2;
     }
 
     else
@@ -39,7 +40,7 @@ int main()
         printf("/ (division)\n");
     }
 
-    printf("\nYour answer is: %f\n", num1 + num2);
+    printf("\nYour answer is: %f\n", result);
 
     return 0;
 }
