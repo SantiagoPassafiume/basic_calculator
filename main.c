@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void errorMessage()
+{
+    printf("\n");
+    printf("This calculator only supports the following operators: \n");
+    printf("+ (addition)\n");
+    printf("- (subtraction)\n");
+    printf("* (multiplication)\n");
+    printf("/ (division)\n");
+}
+
 int main()
 {
     double num1;
@@ -43,11 +53,7 @@ int main()
 
     else
     {
-        printf("This calculator only supports the following operators: \n");
-        printf("+ (addition)\n");
-        printf("- (subtraction)\n");
-        printf("* (multiplication)\n");
-        printf("/ (division)\n");
+        errorMessage();
     }
 
     printf("\nYour answer is: %f\n", result);
