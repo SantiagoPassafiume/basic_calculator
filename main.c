@@ -5,6 +5,7 @@ int main()
 {
     double num1;
     double num2;
+    char operator;
     printf("Enter first number: ");
     scanf("%lf", &num1);
     printf("Enter second number: ");
