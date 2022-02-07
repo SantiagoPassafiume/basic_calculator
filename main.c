@@ -13,6 +13,32 @@ int main()
     printf("Enter second number: ");
     scanf("%lf", &num2);
 
+    if (operator== '+')
+    {
+        printf("%f", num1 + num2);
+    }
+    else if (operator== '-')
+    {
+        printf("%f", num1 - num2);
+    }
+    else if (operator== '*')
+    {
+        printf("%f", num1 * num2);
+    }
+    else if (operator== '/')
+    {
+        printf("%f", num1 / num2);
+    }
+
+    else
+    {
+        printf("This calculator only supports the following operators: \n");
+        printf("+ (addition)\n");
+        printf("- (subtraction)\n");
+        printf("* (multiplication)\n");
+        printf("/ (division)\n");
+    }
+
     printf("\nYour answer is: %f\n", num1 + num2);
 
     return 0;
