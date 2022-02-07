@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-void errorMessage()
+bool errorMessage()
 {
     printf("\n");
     printf("This calculator only supports the following operators: \n");
@@ -9,6 +10,7 @@ void errorMessage()
     printf("- (subtraction)\n");
     printf("* (multiplication)\n");
     printf("/ (division)\n");
+    return false;
 }
 
 double calculate(char operator, double num1, double num2)
@@ -45,7 +47,10 @@ int main()
 
     double result = calculate(operator, num1, num2);
 
-    printf("\nYour answer is: %f\n", result);
+    if (result != false)
+    {
+        printf("\nYour answer is: %f\n", result);
+    }
 
     return 0;
 }
