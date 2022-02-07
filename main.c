@@ -7,10 +7,13 @@ int main()
     double num2;
     char operator;
     double result;
+
     printf("Enter first number: ");
     scanf("%lf", &num1);
+
     printf("Enter operator: ");
     scanf(" %c", &operator);
+
     printf("Enter second number: ");
     scanf("%lf", &num2);
 
