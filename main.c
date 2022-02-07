@@ -31,7 +31,14 @@ int main()
     }
     else if (operator== '/')
     {
-        result = num1 / num2;
+        if (num2 == 0)
+        {
+            printf("YOU CANNOT DIVIDE BY 0.");
+        }
+        else
+        {
+            result = num1 / num2;
+        }
     }
 
     else
