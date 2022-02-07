@@ -11,12 +11,43 @@ void errorMessage()
     printf("/ (division)\n");
 }
 
+double calculate(char operator, double num1, double num2)
+{
+    if (operator== '+')
+    {
+        return num1 + num2;
+    }
+    else if (operator== '-')
+    {
+        return num1 - num2;
+    }
+    else if (operator== '*')
+    {
+        return num1 * num2;
+    }
+    else if (operator== '/')
+    {
+        if (num2 == 0)
+        {
+            printf("YOU CANNOT DIVIDE BY 0.");
+        }
+        else
+        {
+            return num1 / num2;
+        }
+    }
+
+    else
+    {
+        errorMessage();
+    }
+}
+
 int main()
 {
     double num1;
     double num2;
     char operator;
-    double result;
 
     printf("Enter first number: ");
     scanf("%lf", &num1);
@@ -27,34 +58,7 @@ int main()
     printf("Enter second number: ");
     scanf("%lf", &num2);
 
-    if (operator== '+')
-    {
-        result = num1 + num2;
-    }
-    else if (operator== '-')
-    {
-        result = num1 - num2;
-    }
-    else if (operator== '*')
-    {
-        result = num1 * num2;
-    }
-    else if (operator== '/')
-    {
-        if (num2 == 0)
-        {
-            printf("YOU CANNOT DIVIDE BY 0.");
-        }
-        else
-        {
-            result = num1 / num2;
-        }
-    }
-
-    else
-    {
-        errorMessage();
-    }
+    double result = calculate(operator, num1, num2);
 
     printf("\nYour answer is: %f\n", result);
 
