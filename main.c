@@ -13,32 +13,17 @@ void errorMessage()
 
 double calculate(char operator, double num1, double num2)
 {
-    if (operator== '+')
+    switch (operator)
     {
+    case '+':
         return num1 + num2;
-    }
-    else if (operator== '-')
-    {
+    case '-':
         return num1 - num2;
-    }
-    else if (operator== '*')
-    {
+    case '*':
         return num1 * num2;
-    }
-    else if (operator== '/')
-    {
-        if (num2 == 0)
-        {
-            printf("YOU CANNOT DIVIDE BY 0.");
-        }
-        else
-        {
-            return num1 / num2;
-        }
-    }
-
-    else
-    {
+    case '/':
+        return num1 / num2;
+    default:
         errorMessage();
     }
 }
